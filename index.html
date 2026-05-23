@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Télécharger Proximity</title>
+    <script>
+      const userAgent = navigator.userAgent || navigator.vendor;
+
+      if (/iPad|iPhone|iPod/.test(userAgent)) {
+        window.location.href = "https://apps.apple.com/app/id6769840136";
+      } else if (/android/i.test(userAgent)) {
+        document.addEventListener("DOMContentLoaded", function () {
+          document.getElementById("android-msg").style.display = "block";
+        });
+      } else {
+        window.location.href = "https://apps.apple.com/app/id6769840136";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="android-msg" style="display:none; font-family:sans-serif; text-align:center; padding:40px;">
+      <h2>Proximity arrive bientôt sur Android 🎉</h2>
+      <p>L'application est en cours de validation sur le Play Store.</p>
+      <p>Revenez dans quelques jours !</p>
+    </div>
+  </body>
+</html>
